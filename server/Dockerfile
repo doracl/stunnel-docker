@@ -1,7 +1,7 @@
 FROM ubuntu:16.04
 MAINTAINER dorwcl@gmail.com
 
-ENV SQUID_VERSION=4.4 \
+ENV SQUID_VERSION=3:4.4 \
     SQUID_CACHE_DIR=/var/spool/squid \
     SQUID_LOG_DIR=/var/log/squid \
     SQUID_USER=proxy \
