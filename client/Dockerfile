@@ -1,8 +1,8 @@
 FROM ubuntu:16.04
-MAINTAINER jolestar@gmail.com
+MAINTAINER dorwcl@gmail.com
 
 ENV CERT_DIR=/etc/docker-proxy/cert \
-    STUNNEL_VERSION=3:5.30 
+    STUNNEL_VERSION=3:5.50 
 
 RUN apt-get update \
  && DEBIAN_FRONTEND=noninteractive apt-get install -y stunnel4=${STUNNEL_VERSION}* \
