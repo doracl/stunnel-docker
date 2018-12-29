@@ -24,4 +24,4 @@ RUN sed -i.dist -e 's/^win32_ssl_dir =.*$/win32_ssl_dir = \/target/' \
   -e 's/^win32_gui_libs =.*$/win32_gui_libs = -lws2_32 -lkernel32 -L\/target\/lib  -lssl -lcrypto -lcrypt32 -lgdi32 -lpsapi  /' \
   src/mingw.mk 
 RUN make -C src mingw
-RUN cp bin/mingw/*.exe /target/bin
+RUN cp bin/win32/*.exe /target/bin
