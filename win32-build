@@ -5,9 +5,9 @@ RUN mkdir /src
 RUN mkdir /target
 
 WORKDIR /src/
-RUN wget https://www.openssl.org/source/openssl-1.0.2k.tar.gz 
-RUN tar zxf openssl-1.0.2k.tar.gz
-WORKDIR /src/openssl-1.0.2k
+RUN wget https://www.openssl.org/source/openssl-1.1.1a.tar.gz
+RUN tar zxf openssl-1.1.1a.tar.gz
+WORKDIR /src/openssl-1.1.1a
 RUN ./Configure no-shared --prefix=/target --openssldir=/target --cross-compile-prefix=i686-w64-mingw32- no-ssl2 no-weak-ssl-ciphers  mingw
 RUN make depend all install
 RUN cp ms/applink.c /target/include/openssl
